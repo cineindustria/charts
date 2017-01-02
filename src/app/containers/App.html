@@ -1,0 +1,31 @@
+<!-- <header-component todos="$ctrl.todos"></header-component>
+<main-section
+  todos="$ctrl.todos"
+  filter="$ctrl.filter"
+  ></main-section>-->
+<div class="navmenu navmenu-default navmenu-fixed-right">
+    <a class="navmenu-brand">{{$ctrl.movie.name}}</a>
+</div>
+<div class="canvas">
+    <div class="container-fluid">
+        <div class="row">
+            <div
+              class="md-col-12 text-center"
+              ng-cloak="">
+                <div
+                  ng-repeat="grab in $ctrl.grabs"
+                  class="grab">
+                    <img
+                      title="{{grab.id}}"
+                      alt="{{grab.name}}"
+                      ng-click="$ctrl.setMovie(grab)"
+                      data-toggle="offcanvas"
+                      data-recalc="false"
+                      data-target=".navmenu"
+                      data-canvas=".canvas"
+                      src="http://placehold.it/200x200/CCC">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
