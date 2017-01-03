@@ -12,13 +12,19 @@ class AppController {
   }
   displayGrabs(){
     this.datasetService
-      .getData()
+      .getMovies()
       .then((grabs) => {
         this.grabs = grabs.data
       })
   }
   setMovie(grab){
     this.movie = grab
+    this.datasetService
+      .getImages(this.movie.id)
+      .then((images) => {
+        this.imgs = images.data
+        console.log(this.imgs)
+      })
   }
 }
 
