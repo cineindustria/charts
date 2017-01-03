@@ -3,3 +3,8 @@ coverage/
 dist/
 node_modules/
 .DS_Store
+images/
+*.jpg
+*.svg
+*.gif
+*.png
