@@ -31,17 +31,13 @@ body {
 }
 
 .grab {
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-  background-color: #eee;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background-color: #eee;
 }
 
-
-
-
-
-
-
-
-
+.navmenu,
+.navbar-offcanvas {
+    width: 65%;
+}
