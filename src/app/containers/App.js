@@ -26,6 +26,9 @@ class AppController {
         console.log(this.imgs)
       })
   }
+  paginate(){
+    console.log("paginate...")
+  }
 }
 
 export const App = {

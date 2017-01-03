@@ -1,6 +1,6 @@
 import angular from 'angular';
 import iso from 'angular-isotope';
-//import 'todomvc-app-css/index.css';
+import ngInfiniteScroll from 'ng-infinite-scroll';
 
 //import {TodoService} from './app/todos/todos';
 import {DatasetService} from './app/dataset/dataset';
@@ -16,7 +16,7 @@ import routesConfig from './routes';
 import './index.scss';
 
 angular
-  .module('app', ['ui.router', 'iso.directives'])
+  .module('app', ['ui.router', 'iso.directives', ngInfiniteScroll])
   .config(routesConfig)
   //.service('todoService', TodoService)
   .service('datasetService', DatasetService)
