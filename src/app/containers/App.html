@@ -1,10 +1,3 @@
-<!-- <header-component todos="$ctrl.todos"></header-component>
-<main-section
-  todos="$ctrl.todos"
-  filter="$ctrl.filter"
-  ></main-section>
-  http://placehold.it/200x200/CCC
-  -->
 <div class="navmenu navmenu-default navmenu-fixed-right">
     <a class="navmenu-brand">{{$ctrl.movie.name}}</a>
 </div>
@@ -19,7 +12,7 @@
                 <div
                   ng-repeat="grab in $ctrl.grabs"
                   class="grab">
-                    <img
+                   <!--  <img
                       data-recalc="false"
                       data-canvas=".canvas"
                       data-target=".navmenu"
@@ -29,7 +22,7 @@
                       title="{{grab.id}}"
                       alt="{{grab.name}}"
                       ng-click="$ctrl.setMovie(grab)"
-                      ng-src="./app/dataset/images/{{grab.id}}/{{grab.imgs[0]}}">
+                      ng-src="./app/dataset/images/{{grab.id}}/{{grab.imgs[0]}}"> -->
                 </div>
             </div>
         </div>
