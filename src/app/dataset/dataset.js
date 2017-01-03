@@ -8,7 +8,7 @@ export class DatasetService {
             url: './app/dataset/grabs.json'
         })
     }
-    getImages(id) {
+    getImagesByID(id) {
         return this.$http({
             method: 'GET',
             url: './app/dataset/images-list/' + id + '.json'

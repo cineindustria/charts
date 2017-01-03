@@ -15,16 +15,22 @@ class AppController {
       .getMovies()
       .then((grabs) => {
         this.grabs = grabs.data
+        this.attachImagesToGrab()
       })
   }
+  attachImagesToGrab(){
+    this.grabs.map((grab) =>{
+      this.datasetService
+        .getImagesByID(grab.id)
+        .then((images) => {
+          grab.imgs = images.data
+        })
+    })
+    console.log(this.grabs)
+  }
   setMovie(grab){
+    console.log(this.grabs)
     this.movie = grab
-    this.datasetService
-      .getImages(this.movie.id)
-      .then((images) => {
-        this.imgs = images.data
-        console.log(this.imgs)
-      })
   }
   paginate(){
     console.log("paginate...")

@@ -2,7 +2,9 @@
 <main-section
   todos="$ctrl.todos"
   filter="$ctrl.filter"
-  ></main-section>-->
+  ></main-section>
+  http://placehold.it/200x200/CCC
+  -->
 <div class="navmenu navmenu-default navmenu-fixed-right">
     <a class="navmenu-brand">{{$ctrl.movie.name}}</a>
 </div>
@@ -13,20 +15,21 @@
               class="md-col-12 text-center"
               ng-cloak=""
               infinite-scroll="$ctrl.paginate()"
-              infinite-scroll-distance="3"
-              >
+              infinite-scroll-distance="3">
                 <div
                   ng-repeat="grab in $ctrl.grabs"
                   class="grab">
                     <img
+                      data-recalc="false"
+                      data-canvas=".canvas"
+                      data-target=".navmenu"
+                      data-toggle="offcanvas"
+                      width="200"
+                      height="200"
                       title="{{grab.id}}"
                       alt="{{grab.name}}"
                       ng-click="$ctrl.setMovie(grab)"
-                      data-toggle="offcanvas"
-                      data-recalc="false"
-                      data-target=".navmenu"
-                      data-canvas=".canvas"
-                      src="http://placehold.it/200x200/CCC">
+                      ng-src="./app/dataset/images/{{grab.id}}/{{grab.imgs[0]}}">
                 </div>
             </div>
         </div>
