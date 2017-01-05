@@ -1,5 +1,15 @@
 <div class="navmenu navmenu-default navmenu-fixed-right">
-    <a class="navmenu-brand">{{$ctrl.movie.name}}</a>
+    <a class="navmenu-brand">{{$ctrl.selectedMovie.name}}</a>
+    <div class="gridMoviesList">
+      <img
+        ng-repeat="img in $ctrl.imageList[$ctrl.selectedMovie.id]"
+        ng-src="./app/dataset/images/{{$ctrl.selectedMovie.id}}/{{img}}"
+        alt="$ctrl.selectedMovie.name"
+        title="$ctrl.selectedMovie.name"
+        width="40"
+        height="40"
+        >
+    </div>
 </div>
 <div class="canvas">
     <div class="container-fluid">

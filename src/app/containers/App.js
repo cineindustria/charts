@@ -7,7 +7,7 @@ class AppController {
         this.filter = SHOW_ALL;
         this.datasetService = datasetService;
         this.grabs = null;
-        this.movie = null;
+        this.selectedMovie = [];
         this.imageList = [];
         this.displayGrabs();
     }
@@ -20,8 +20,8 @@ class AppController {
         })
     }
     setMovie(grab) {
-        console.log(this.grabs)
-        this.movie = grab
+        this.selectedMovie['name'] = grab.name
+        this.selectedMovie['id'] = grab.id
     }
     displayImgs() {
         this.grabs.map((grab) => {
