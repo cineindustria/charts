@@ -12,17 +12,18 @@
                 <div
                   ng-repeat="grab in $ctrl.grabs"
                   class="grab">
-                   <!--  <img
+                    <img
                       data-recalc="false"
                       data-canvas=".canvas"
                       data-target=".navmenu"
                       data-toggle="offcanvas"
                       width="200"
                       height="200"
-                      title="{{grab.id}}"
+                      title="{{grab.name}}"
                       alt="{{grab.name}}"
                       ng-click="$ctrl.setMovie(grab)"
-                      ng-src="./app/dataset/images/{{grab.id}}/{{grab.imgs[0]}}"> -->
+                      ng-src="./app/dataset/images/{{grab.id}}/{{$ctrl.imageList[grab.id][0]}}"
+                      >
                 </div>
             </div>
         </div>
